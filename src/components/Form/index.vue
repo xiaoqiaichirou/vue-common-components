@@ -129,7 +129,7 @@
 //     listeners： '', // 当 component 为渲染组件时，注入到渲染组件当中的事件
 // }
 export default {
-    name: "NxForm",
+    name: "JsForm",
     props: {
         config: {
             type: Array,
@@ -179,4 +179,3 @@ export default {
     }
 }
 </style>
-
