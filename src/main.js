@@ -4,12 +4,12 @@ import App from './App.vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import cpForm from '@/components/Form'
+import jsForm from '@/components/Form'
 
 
 Vue.config.productionTip = false
 
-Vue.component("cpForm", cpForm);
+Vue.component("jsForm", jsForm);
 
 Vue.use(ElementUI)
 

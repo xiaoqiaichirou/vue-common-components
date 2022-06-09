@@ -1,6 +1,6 @@
 <template>
-    <div class="nx-form">
-        <el-form ref="form" v-bind="$attrs" :model="source" class="nx-form">
+    <div class="js-form">
+        <el-form ref="form" v-bind="$attrs" :model="source" class="js-form">
             <el-row :gutter="20">
                 <el-col
                     v-for="item in config"
@@ -26,7 +26,7 @@
                             {{ item.innerText || source[item.key] }}
                         </div>
                         <template v-else>
-                            <div class="nx-flex-align-center">
+                            <div class="js-flex-align-center">
                                 <component
                                     :is="item.component"
                                     v-model="source[item.key]"
@@ -97,13 +97,13 @@
                                         >年</i
                                     >
                                 </component>
-                                <div v-if="item.after" class="nx-form__after">
+                                <div v-if="item.after" class="js-form__after">
                                     {{ item.after }}
                                 </div>
                             </div>
                             <div
                                 v-if="item.tips"
-                                class="nx-form__tips"
+                                class="js-form__tips"
                                 v-html="item.tips"
                             ></div>
                         </template>
