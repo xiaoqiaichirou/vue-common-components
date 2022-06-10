@@ -129,41 +129,45 @@
 //     listeners： '', // 当 component 为渲染组件时，注入到渲染组件当中的事件
 // }
 export default {
-    name: "JsForm",
+    name: 'JsForm',
     props: {
         config: {
             type: Array,
-            default: () => [],
+            default: () => []
         },
-        source: {
+        formPar: {
             type: Object,
-            default: () => ({}),
-        },
+            default: () => ({})
+        }
     },
     data() {
         return {
             // 默认width
-            labelWidth: "100px",
-        };
+            labelWidth: '100px'
+        }
     },
     inheritAttrs: false,
     methods: {
         resetFields() {
-            this.$refs.form.resetFields();
+            this.$refs.form.resetFields()
         },
         clearValidate() {
-            this.$refs.form.clearValidate();
+            this.$refs.form.clearValidate()
         },
         async validate() {
-            const valid = await this.$refs.form.validate();
-            return valid;
+            return await this.$refs.form.validate()
         },
         //  清空upload上传文件列表
         clearFile() {
-            this.$refs.uploadFile.clearFiles();
-        },
+            this.$refs.uploadFile.clearFiles()
+        }
     },
-};
+    computed: {
+        source() {
+            return this.formPar
+        }
+    }
+}
 </script>
 
 <style scoped lang="scss">

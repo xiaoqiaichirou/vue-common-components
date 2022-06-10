@@ -1,5 +1,7 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <js-form></js-form>
+    </div>
 </template>
 
 <script>
