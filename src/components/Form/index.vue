@@ -135,7 +135,7 @@ export default {
             type: Array,
             default: () => [],
         },
-        source: {
+        formPar: {
             type: Object,
             default: () => ({}),
         },
@@ -144,7 +144,13 @@ export default {
         return {
             // 默认width
             labelWidth: "100px",
+            source: this.formPar,
         };
+    },
+    computed: {
+        sources() {
+            return this.formPar;
+        },
     },
     inheritAttrs: false,
     methods: {
