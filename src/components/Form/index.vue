@@ -146,6 +146,11 @@ export default {
             labelWidth: '100px'
         }
     },
+    computed: {
+        sources() {
+            return this.formPar
+        }
+    },
     inheritAttrs: false,
     methods: {
         resetFields() {
@@ -160,11 +165,6 @@ export default {
         //  清空upload上传文件列表
         clearFile() {
             this.$refs.uploadFile.clearFiles()
-        }
-    },
-    computed: {
-        source() {
-            return this.formPar
         }
     }
 }
